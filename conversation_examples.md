@@ -1,21 +1,22 @@
-New Patient – Appointment Booking
+# Conversation Examples
+
+## New Patient – Appointment Booking
 
 AI: Hello, thank you for calling the dental clinic. How may I assist you today?
-Patient: I’d like to book a cleaning appointment.
+Patient: I'd like to book a cleaning appointment.
 AI: Are you a new or returning patient?
-Patient: New patient.
+Patient: New.
 AI: May I have your full name?
 Patient: Sarah Williams.
-AI: Thank you. Please provide your phone number.
-Patient: 9876543210.
-AI: What date would you prefer?
+AI: Please provide your phone number.
+Patient: 9876543210
+AI: What date works best for you?
 Patient: March 15th.
-AI: What time works best for you?
+AI: What time do you prefer?
 Patient: Around 11 AM.
-AI: Let me check availability… That slot is available.
-You are booking a dental cleaning on March 15th at 11:00 AM. Shall I confirm?
+AI: Let me check availability. That slot is available. You are booking a dental cleaning on March 15th at 11:00 AM. Shall I confirm?
 Patient: Yes.
-AI: Your appointment is confirmed. We look forward to seeing you.
+AI: Your appointment is confirmed.
 
 Structured Output:
 
@@ -34,67 +35,11 @@ Structured Output:
   "notes": ""
 }
 
-Rescheduling Appointment
 
-Patient: I need to move my appointment.
-AI: May I have your name or appointment ID?
-Patient: John Patel.
-AI: Please provide your new preferred date.
-Patient: March 20th.
-AI: What time works best?
-Patient: 2 PM.
-AI: That slot is available. Shall I confirm the reschedule?
-Patient: Yes.
-AI: Your appointment has been successfully rescheduled.
+## Emergency Escalation
 
-Structured Output:
-
-{
-  "intent": "reschedule_appointment",
-  "patient_status": "returning",
-  "patient_name": "John Patel",
-  "phone_number": "",
-  "appointment_id": "",
-  "appointment_date": "2025-03-20",
-  "appointment_time": "2:00 PM",
-  "procedure_type": "",
-  "insurance_provider": "",
-  "status": "confirmed",
-  "escalation": false,
-  "notes": ""
-}
-
-No-Show Follow-Up
-
-AI: We noticed you missed your appointment yesterday. Would you like to reschedule?
-Patient: Yes, please.
-AI: What date works for you?
-Patient: Next Monday at 10 AM.
-AI: That slot is available. Shall I confirm?
-Patient: Yes.
-AI: Your new appointment is confirmed.
-
-Structured Output:
-
-{
-  "intent": "no_show_follow_up",
-  "patient_status": "returning",
-  "patient_name": "",
-  "phone_number": "",
-  "appointment_id": "",
-  "appointment_date": "2025-03-18",
-  "appointment_time": "10:00 AM",
-  "procedure_type": "",
-  "insurance_provider": "",
-  "status": "confirmed",
-  "escalation": false,
-  "notes": "Rescheduled after no-show"
-}
-
-Emergency Escalation
-
-Patient: I’m bleeding heavily after a tooth extraction.
-AI: I understand this is urgent. I am transferring you to a clinic staff member immediately for assistance. Please stay on the line.
+Patient: I'm bleeding heavily after a tooth extraction.
+AI: This appears to be an emergency. I am transferring you to a clinic staff member immediately. Please stay on the line.
 
 Structured Output:
 
@@ -112,4 +57,3 @@ Structured Output:
   "escalation": true,
   "notes": "Emergency call transferred"
 }
-
