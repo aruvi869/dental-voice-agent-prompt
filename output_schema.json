@@ -1,1 +1,27 @@
+{
+  "schema_version": "1.0",
+  "description": "Structured output schema for AI-powered dental voice assistant interactions",
 
+  "intent": "book_appointment | reschedule_appointment | cancel_appointment | confirm_appointment | no_show_follow_up | general_query | emergency_request | escalation_required",
+
+  "patient_status": "new | returning | unknown",
+
+  "patient_name": "string",
+  "phone_number": "string",
+
+  "appointment_id": "string",
+
+  "appointment_date": "YYYY-MM-DD",
+  "appointment_time": "HH:MM AM/PM",
+
+  "procedure_type": "string",
+  "insurance_provider": "string",
+
+  "status": "pending | confirmed | cancelled | escalated",
+
+  "escalation": "boolean",
+
+  "confidence_level": "high | medium | low",
+
+  "notes": "string"
+}
