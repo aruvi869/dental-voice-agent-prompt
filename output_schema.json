@@ -1,4 +1,4 @@
-New Patient – Appointment Booking
+**New Patient – Appointment Booking
 
 AI: Hello, thank you for calling the dental clinic. How may I assist you today?
 Patient: I’d like to book a cleaning appointment.
@@ -17,7 +17,7 @@ You are booking a dental cleaning on March 15th at 11:00 AM. Shall I confirm?
 Patient: Yes.
 AI: Your appointment is confirmed. We look forward to seeing you.
 
-Structured Output:
+Structured Output:**
 
 {
   "intent": "book_appointment",
@@ -34,7 +34,7 @@ Structured Output:
   "notes": ""
 }
 
-Rescheduling Appointment
+**Rescheduling Appointment
 
 Patient: I need to move my appointment.
 AI: May I have your name or appointment ID?
@@ -47,7 +47,7 @@ AI: That slot is available. Shall I confirm the reschedule?
 Patient: Yes.
 AI: Your appointment has been successfully rescheduled.
 
-Structured Output:
+Structured Output:**
 
 {
   "intent": "reschedule_appointment",
@@ -64,7 +64,7 @@ Structured Output:
   "notes": ""
 }
 
-No-Show Follow-Up
+**No-Show Follow-Up
 
 AI: We noticed you missed your appointment yesterday. Would you like to reschedule?
 Patient: Yes, please.
@@ -74,7 +74,7 @@ AI: That slot is available. Shall I confirm?
 Patient: Yes.
 AI: Your new appointment is confirmed.
 
-Structured Output:
+Structured Output:**
 
 {
   "intent": "no_show_follow_up",
@@ -91,12 +91,12 @@ Structured Output:
   "notes": "Rescheduled after no-show"
 }
 
-Emergency Escalation
+**Emergency Escalation
 
 Patient: I’m bleeding heavily after a tooth extraction.
 AI: I understand this is urgent. I am transferring you to a clinic staff member immediately for assistance. Please stay on the line.
 
-Structured Output:
+Structured Output:**
 
 {
   "intent": "emergency_request",
